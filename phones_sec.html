@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PNGWORLD website</title>
+  <meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" class="css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body style=" font-size: 25px;font-family: 'Oswald', sans-serif;">
+  <!-- Navbar Section -->
+  <nav class="navbar navbar-expand-sm  border-top-0 fixed-top" style="background-color: white;box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 1px 0 rgba(0, 0, 0, 0.20);">
+    <div class="container-fluid">
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="index.html">Home</a>
+        <a href="pngimages.html">Png images</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+        <button class="openbtn" onclick="openNav()">☰ </button>  
+
+      <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+      }
+      </script>
+      
+             <a class="navbar-brand" href="javascript:void(0) " style="font-size: 40px; font-weight: bold; color: black; font-family: 'Lobster', cursive;">PNG<span style="color: gold;">WORLD</span></a>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav ms-auto"  style="padding-right: 100px;">
+              <li class="nav-item" >
+                <a class="nav-link" href="index.html" style="color: black; font-size: 20px;">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pngimages.html" style="color: black;  font-size: 20px;">Png images</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"style="color: black;  font-size: 20px;">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html"style="color: black;  font-size: 20px;">contact</a>
+              </li>
+            </ul>
+            <script>
+              function myFunction() {
+                  var input, filter, ul, li, a, i, txtValue;
+                  input = document.getElementById("myInput");
+                  filter = input.value.toUpperCase();
+                  ul = document.getElementById("myUL");
+                  li = ul.getElementsByTagName("li");
+                  for (i = 0; i < li.length; i++) {
+                      a = li[i].getElementsByTagName("a")[0];
+                      txtValue = a.textContent || a.innerText;
+                      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                          li[i].style.display = "";
+                      } else {
+                          li[i].style.display = "none";
+                      }
+                  }
+              }
+              </script>
+          </div>
+        </div>
+      </nav>
+
+
+<div class="container-fluid text-center" id="c1">
+  <!-- Search Bar -->
+  <style>
+    * {
+        box-sizing: border-box;
+      }
+      
+      #myInput {
+        width: 80%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+        border-radius: 50px;
+        outline: none;
+        background-color: rgb(255, 255, 255);
+      }
+      
+      #myUL {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        
+      }
+      
+      #myUL li a {
+        
+        margin-top: -1px; /* Prevent double borders */
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-align: left;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block;
+       
+      
+      }
+      
+      #myUL li a:hover:not(.header) {
+        background-color: #eee;
+      }
+      </style>
+     
+      
+     <!-- Search Bar Section -->
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a category..." title="Type in a category" style="margin-top: 2%;">
+      <ul id="myUL" style="width: 50%; margin: auto;border-radius: 90px;  margin-top: 0%; border: none;">
+        <li><a href="fitness.html">Fitness</a></li>
+        <li><a href="cars.html">car</a></li>
+        <li><a href="phones_sec.html">Phones</a></li>
+      </ul>
+      
+      <script>
+        
+      function myFunction() {
+          var input, filter, ul, li, a, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("myUL");
+          li = ul.getElementsByTagName("li");
+          for (i = 0; i < li.length; i++) {
+              a = li[i].getElementsByTagName("a")[0];
+              txtValue = a.textContent || a.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  li[i].style.display = "";
+              } else {
+                  li[i].style.display = "none";
+              }
+          }
+      }
+      </script>
+    </div>
+</div>
+
+<div class="container-fluid text-center">
+      <div class="grid-container" style="margin-top: 5%;">
+        <div class="grid-item"> <a href="images/61d4a0b38b51e20004664d44.png" download><img src="images/61d4a0b38b51e20004664d44.png" style="width: 100%; height: auto;" id="img1"> <button class="btn" style="font-weight: bold; color: black;" id="b1">download</button></div></a>
+        <div class="grid-item"><a href="images/61d4a9d88b51e20004664d51.png" download><img src="images/61d4a9d88b51e20004664d51.png" style="width: 100%; height: auto;" id="img2"><button class="btn" style="font-weight: bold; color: black;"  id="b2">download</button></div></a>
+        <div class="grid-item"><a href="images/6220b2be912013c51947f9db.png" download><img src="images/6220b2be912013c51947f9db.png" style="width: 100%; height: auto;"><button class="btn" style="font-weight: bold; color: black;"  id="b3">download</button></div></a>
+        <div class="grid-item"><a href="images/iphone-x-pictures-45224.png"download><img src="images/iphone-x-pictures-45224.png"  style="width: 100%; height: auto;"><button class="btn" style="font-weight: bold; color: black;"  id="b6">download</button></div></a>
+        <div class="grid-item"><a href="images/iphone-x-pictures-45230.png"download><img src="images/iphone-x-pictures-45230.png" style="width: 100%; height: auto;"><button class="btn" style="font-weight: bold; color: black;"  id="b6">download</button></div></a>
+        <div class="grid-item"><a href="images/iphone_11_PNG20.png"download><img src="images/iphone_11_PNG20.png" style="width: 100%; height: auto;"><button class="btn" style="font-weight: bold; color: black;"  id="b6">download</button></div></a>
+        <div class="grid-item"><a href="images/iphone_11_PNG30.png"download><img src="images/iphone_11_PNG30.png" style="width: 100%; height: auto;"><button class="btn" style="font-weight: bold; color: black;"  id="b6">download</button></div></a>
+        <div class="grid-item"> <a href="images/iphone_11_PNG38.png" dowload> <img src="images/iphone_11_PNG38.png" style="width: 100%; height: auto; color: antiquewhite;"><button class="btn" style="color: black; font-weight: bold;">download</button></div></a>
+        <div class="grid-item"> <a href="images/iphone_11_PNG40.png" download> <img src="images/iphone_11_PNG40.png" style="width: 100%; height: auto;width: 100%; height: auto; color: antiquewhite;"><button class="btn" style="color: black; font-weight: bold;">download</button></div></a>
+        <div class="grid-item"> <a href="images/kindpng_7228095.png" download> <img src="images/kindpng_7228095.png" style="width: 100%; height: auto;width: 100%; height: auto; color: antiquewhite;"><button class="btn" style="color: black; font-weight: bold;">download</button></div></a>
+      </div>
+    </div>
+
+
+<!-- Footer -->
+<footer class="footer " style="background-color: transparent; " id="footer">  
+  <div class="footer-bottom, text-center" style="padding: 20px;">  
+    <h3  style="font-size: 20px; font-weight: bold; color: black; ">©PNG<span style="color: gold;">WORLD</span><span>Copyright All Rights Reserved</span>
+  </div> 
+  </footer>  
+  </body>
+  </html>
